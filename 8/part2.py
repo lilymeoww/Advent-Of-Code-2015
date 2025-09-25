@@ -4,7 +4,7 @@ with open("input.txt", "r") as inputFile:
         inputRaw[lineIndex] = inputRaw[lineIndex].strip()
 
 runningTotalString = 0
-runningTotalMemory = 0
+runningTotalNew = 0
 for line in inputRaw:
     charCount = 0
     containsHex = True
