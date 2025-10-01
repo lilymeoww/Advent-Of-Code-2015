@@ -31,6 +31,6 @@ for permutation in permutations:
 
 
 routeLengths.sort()
-print(routeLengths[0])
+print(routeLengths[-1])
 
 
