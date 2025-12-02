@@ -22,17 +22,20 @@ for i in range(101):
 cookieScores = []
 
 for possibility in combinations:
-    capacity = durability = flavor = texture = 0
+    capacity = durability = flavor = texture = calories = 0
     for ingredientIndex in range(len(possibility)):
         capacity += possibility[ingredientIndex] * ingredients[str(ingredientIndex)][0]
         durability += possibility[ingredientIndex] * ingredients[str(ingredientIndex)][1]
         flavor += possibility[ingredientIndex] * ingredients[str(ingredientIndex)][2]
         texture += possibility[ingredientIndex] * ingredients[str(ingredientIndex)][3]
+        calories += possibility[ingredientIndex] * ingredients[str(ingredientIndex)][4]
     capacity = max(0, capacity)
     durability = max(0, durability)
     flavor = max(0, flavor)
     texture = max(0, texture)
-    cookieScores.append(capacity*durability*flavor*texture)
+    calories = max(0, calories)
+    if calories == 500:
+        cookieScores.append(capacity*durability*flavor*texture)
 
 print(max(cookieScores))
 
