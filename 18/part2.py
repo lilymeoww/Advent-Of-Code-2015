@@ -39,6 +39,11 @@ for i in range(100):
             else:
                 inputRaw[row][column] = "#"
 
+    inputRaw[0][0] = "#"
+    inputRaw[99][99] = "#"
+    inputRaw[0][99] = "#"
+    inputRaw[99][0] = "#"
+
 onCount = 0
 for rowIndex in range(len(inputRaw)):
     for columnIndex in range(len(inputRaw[0])):
