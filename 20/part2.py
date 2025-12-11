@@ -7,7 +7,7 @@ while not complete:
     for elf in range(1, maxId):
         for multiplier in range(1, 51):
             house = elf * multiplier
-            if house > maxId:
+            if house > maxId:#
                 break
             houses[house] += 11 * elf
 
